@@ -22,8 +22,9 @@ module.exports = function (gulp) {
                 .pipe(plumber.stop())
                 .pipe(jslint.reporter('default')),
             
+            //JS files combined - add any new JS filepaths to 'entries' array
             browserified = browserify({
-                    entries: 'assets/js/index.js', 
+                    entries: ['assets/js/index.js','assets/js/analytics/stats.js','assets/js/analytics/projectStats.js','assets/js/analytics/bootstrap.min.js'], 
                     debug: true
                 })
                 .transform("babelify", {presets: [["env", {"targets": {"browsers": browserMatrix}}]]})

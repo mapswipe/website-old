@@ -139,7 +139,7 @@ function populateProjectsTable(geojsonData) {
     }
 
     tr.appendChild(td)
-  })
+  });
 
   $('#projectsTable').DataTable();
   $('.dataTables_length').addClass('bs-select');
