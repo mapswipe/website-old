@@ -14,7 +14,7 @@ module.exports = function (gulp) {
 
     return function () {
         let jslinted =
-                gulp.src(['assets/js/*.js'])
+                gulp.src(['assets/js/**/*.js'])
                 //gulp.src(['assets/js/components/*.js', 'assets/js/framework*.js'])
                 .pipe(jslint())
                 .pipe(jslint.reporter(stylish)),
