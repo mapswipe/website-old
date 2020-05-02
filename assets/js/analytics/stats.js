@@ -24,7 +24,7 @@ exports.initMap = function initMap() {
 }
 
 function addLegend() {
-  var legend = L.control({position: 'bottomleft'});
+  var legend = L.control({position: 'topright'});
   legend.onAdd = function (map) {
 	var div = L.DomUtil.create('div', 'info legend')
 	div.innerHTML += '<i style="background:orange"></i>active<br>'
@@ -125,20 +125,22 @@ function populateProjectsTable(geojsonData) {
     td.innerHTML = element.properties.status
     tr.appendChild(td)
 
-    td = document.createElement('td')
-    if (element.properties.progress > 0) {
-        td.innerHTML = Math.round(100*element.properties.progress)+'%'
-    } else {
-        td.innerHTML = 'not available'
-    }
+    //Third column removed - project progress
+    // td = document.createElement('td')
+    // if (element.properties.progress > 0) {
+    //     td.innerHTML = Math.round(100*element.properties.progress)+'%'
+    // } else {
+    //     td.innerHTML = 'not available'
+    // }
     tr.appendChild(td)
 
-    td = document.createElement('td')
-    if (parseInt(element.properties.number_of_users) > 0) {
-        td.innerHTML = element.properties.number_of_users
-    } else {
-        td.innerHTML = 'not available'
-    }
+    //Forth column removed - number of users
+    // td = document.createElement('td')
+    // if (parseInt(element.properties.number_of_users) > 0) {
+    //     td.innerHTML = element.properties.number_of_users
+    // } else {
+    //     td.innerHTML = 'not available'
+    // }
 
     tr.appendChild(td)
   });
