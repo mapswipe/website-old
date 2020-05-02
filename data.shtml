@@ -162,52 +162,6 @@ crossorigin=""></script>
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-container">
-      <h2>MapSwipe analytics</h2>
-      <div class="rich-text">
-        <p>Swiping with MapSwipe is just the beginning. Access a full suite of tools to help you understand where in the
-          world MapSwipe projects are underway and how MapSwipers are making contributions to OpenStreetMap. <a
-            href="https://mapswipe.heigit.org/" target="_blank">See all of the analytics tools here.</a></p>
-      </div>
-
-      <div class="section-flex">
-        <div class="one-half">
-          <img src="assets/img/analytics.png">
-        </div>
-        <div class="one-half">
-          <h3>Analytics</h3>
-          <p>MapSwipe Analytics allows you to engage with an interactive dashboard where you can see in-progress and
-            completed MapSwipe projects around the world. Track the progress of certain projects, see the overall
-            percentage complete and number of users, and see the level of agreement between users on where features are
-            located.</p>
-
-          <a href="https://mapswipe.heigit.org/analytics/" target="_blank" class="link link-external">
-            <!-- Start Component -->
-            <!--#include virtual="/markup/svg/external.shtml" -->
-            <!-- End Component -->Find out more</a>
-        </div>
-      </div>
-
-      <div class="section-flex">
-        <div class="one-half">
-          <img src="assets/img/live.png">
-        </div>
-        <div class="one-half">
-          <h3>Live</h3>
-          <p>Use MapSwipe Live to see the latest contributions from users around the world. Display MapSwipe Live in the
-            background of your next MapSwipe-a-thon to show live progress and interactions with the projects.</p>
-
-          <a href="https://mapswipe.heigit.org/live/" target="_blank" class="link link-external">
-            <!-- Start Component -->
-            <!--#include virtual="/markup/svg/external.shtml" -->
-            <!-- End Component -->Find out more</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
   <div class="section green">
     <div class="section-container">
       <div class="rich-text">
@@ -228,7 +182,7 @@ crossorigin=""></script>
   <div class="section">
     <div class="section-container">
       <div class="rich-text">
-        <h2>About MapSwipe data</h2>
+        <h2>Our License</h2>
         <p>This project is part of the OpenStreetMap community. The goal is high-quality geographical data, freely
           accessible and available to everyone. OSM’s reciprocal license protects the data from being appropriated by
           services that do not share back to OSM.</p>
