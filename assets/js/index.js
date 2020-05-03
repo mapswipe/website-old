@@ -2,6 +2,7 @@
 
 import Navigation from './components/navigation.js';
 import {initMap} from './analytics/stats.js';
+import {initAnalyticsProject} from './analytics/projectStats.js';
 
 let html = document.querySelector('html');
 let isMobile = false;
@@ -115,3 +116,4 @@ window.addEventListener('resize', function(){
 });
 
 window.initMap = initMap;
+window.initAnalyticsProject = initAnalyticsProject;
