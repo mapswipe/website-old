@@ -9,25 +9,32 @@ This is the repository for the MapSwipe's website: http://mapswipe.org/
 5. `gulp develop` to start the local development version of site 
 6. `gulp build` to compile production version
 
-The rendered HTML can be found in docs. This is the folder the website points at.
+The rendered HTML can be found in `/docs`.
 
-## Editing CSS
+## Content changes
+- Edit the `.shtml` file of the existing page
+- Or create a new one copying the setup of an existing page with the components
+- Gulp will combine the components and save html into `/docs`
+
+## CSS
+### Editing existing CSS
 - Make changes in `.scss` file in `assets/sass/*` folder
- - Note: Pages are made up of components for header, footer etc.
- - If style to be used througout site, add to `sass/global/_base.scss`
- - If page specific add to `sass/pages/*`
+  - Note: Pages are made up of components for header, footer etc.
+  - If style to be used througout site, add to `sass/global/_base.scss`
+  - If page specific add to `sass/pages/_*.scss`
 - Gulp will compile into `docs/assets/css/style.css`
 
-## Adding a new CSS file
+### Adding a new CSS file
 - Save file as .scss with leading underscore e.g. `_newcode.scss`
 - Add file to suitable subfolder in `assets/sass`
 - Update `assets/sass/style.scss` with the new file path
 
-## Editing a JS file
+## Javascript
+### Editing a JS file
 - Make changes in `assets/js/*`
 - gulp will compile these into `docs/assets/js/index.js`
 
-## Adding a new JS file
+### Adding a new JS file
 - Add file to suitable subfolder in `assets/js`
 - In `gulp-tasks/js-dev.js`, add filepath to `browserified`-`entries` array
 - In `gulp-tasks/js.js`, add filepath to `browserified`-`entries` array
