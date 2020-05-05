@@ -272,6 +272,22 @@ hr {
         -ms-flex: 1 1 100%;
             flex: 1 1 100%; } }
 
+.emphasizedNumber {
+  text-align: center;
+  color: #5382B3;
+  font-size: 3.5em;
+  font-weight: 800;
+  line-height: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px; }
+
+.stats-title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.4em;
+  font-weight: 300;
+  color: #797b7b; }
+
 .page-home .hero-container {
   background-image: url("/assets/img/hero/mapswipe_grid.png"); }
 
@@ -408,24 +424,18 @@ hr {
 .page-data .one-half .link {
   margin-top: 10px; }
 
-.emphasizedNumber {
-  text-align: center;
-  color: #5382B3;
-  font-size: 3.5em;
-  font-weight: 800;
-  line-height: 20px;
-  padding-top: 20px;
-  padding-bottom: 10px; }
-
-.stats-title {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 1.4em;
-  font-weight: 300;
-  color: #797b7b; }
-
 .page-involved .hero-container {
   background-image: url("/assets/img/hero/mapswipe_mapathon.jpg"); }
+
+.page-data .hero-container-small {
+  text-align: left; }
+
+.page-data .hero-content {
+  margin-left: 40px;
+  margin-right: 40px; }
+
+.page-data .one-half .link {
+  margin-top: 10px; }
 
 .prefooter .container,
 footer .container {
