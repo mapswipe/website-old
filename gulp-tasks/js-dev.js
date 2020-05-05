@@ -21,7 +21,7 @@ module.exports = function (gulp) {
 
             //JS files combined - add any new JS filepaths to 'entries' array
             browserified = browserify({
-                    entries: ['assets/js/index.js','assets/js/analytics/stats.js','assets/js/analytics/projectStats.js','assets/js/analytics/bootstrap.min.js'], 
+                    entries: ['assets/js/index.js','assets/js/components/overviewStats.js','assets/js/components/projectStats.js'], 
                     debug: true
                 })
                 .transform("babelify", {presets: [["env", {"targets": {"browsers": ["last 2 versions"]}}]]})
