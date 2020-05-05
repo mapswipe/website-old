@@ -125,22 +125,20 @@ function populateProjectsTable(geojsonData) {
     td.innerHTML = element.properties.status
     tr.appendChild(td)
 
-    //Third column removed - project progress
-    // td = document.createElement('td')
-    // if (element.properties.progress > 0) {
-    //     td.innerHTML = Math.round(100*element.properties.progress)+'%'
-    // } else {
-    //     td.innerHTML = 'not available'
-    // }
+    td = document.createElement('td')
+    if (element.properties.progress > 0) {
+        td.innerHTML = Math.round(100*element.properties.progress)+'%'
+    } else {
+        td.innerHTML = 'not available'
+    }
     tr.appendChild(td)
 
-    //Forth column removed - number of users
-    // td = document.createElement('td')
-    // if (parseInt(element.properties.number_of_users) > 0) {
-    //     td.innerHTML = element.properties.number_of_users
-    // } else {
-    //     td.innerHTML = 'not available'
-    // }
+    td = document.createElement('td')
+    if (parseInt(element.properties.number_of_users) > 0) {
+        td.innerHTML = element.properties.number_of_users
+    } else {
+        td.innerHTML = 'not available'
+    }
 
     tr.appendChild(td)
   });

@@ -1,8 +1,8 @@
 'use strict';
 
 import Navigation from './components/navigation.js';
-import {initMap} from './analytics/stats.js';
-import {initAnalyticsProject} from './analytics/projectStats.js';
+import {initMap} from './components/overviewStats.js';
+import {initAnalyticsProject} from './components/projectStats.js';
 
 let html = document.querySelector('html');
 let isMobile = false;
