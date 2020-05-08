@@ -1,4 +1,6 @@
-function initMap() {
+var map;
+
+exports.initMap = function initMap() {
 
   var myStyle = {
 	"color": "#ff7800",
@@ -12,7 +14,7 @@ function initMap() {
     subdomains: ['a','b','c']
   }).addTo( map );
   console.log('added map');
-  projectCentroidsUrl = 'https://apps.mapswipe.org/api/projects/projects_centroid.geojson';
+  var projectCentroidsUrl = 'https://apps.mapswipe.org/api/projects/projects_centroid.geojson';
   setTimeout(function(){ map.invalidateSize()}, 400);
   addGeojsonLayer(projectCentroidsUrl);
 
@@ -22,7 +24,7 @@ function initMap() {
 }
 
 function addLegend() {
-  legend = L.control({position: 'bottomleft'});
+  var legend = L.control({position: 'topright'});
   legend.onAdd = function (map) {
 	var div = L.DomUtil.create('div', 'info legend')
 	div.innerHTML += '<i style="background:orange"></i>active<br>'
@@ -56,7 +58,7 @@ function addGeojsonLayer (url) {
     };
 
     // create geojson layer
-    layer = L.geoJSON(geojsonData.responseJSON, {
+    var layer = L.geoJSON(geojsonData.responseJSON, {
         pointToLayer: function (feature, latlng) {
             return L.circleMarker(latlng, geojsonMarkerGreen);
         }
@@ -87,13 +89,13 @@ function addGeojsonLayer (url) {
     populateProjectsTable(geojsonData.responseJSON);
 
     // add overview stats
-    finishedProjects = geojsonData.responseJSON.features.filter(function(item) {
+    var finishedProjects = geojsonData.responseJSON.features.filter(function(item) {
         return item['properties']['status'] == 'finished' | item['properties']['status'] == 'archived'
     })
 
-    mappedArea = 0.0
-    for (i = 0; i < finishedProjects.length; i++) {
-      projectArea = parseFloat(finishedProjects[i]['properties']['area_sqkm'])
+    var mappedArea = 0.0
+    for (var i = 0; i < finishedProjects.length; i++) {
+      var projectArea = parseFloat(finishedProjects[i]['properties']['area_sqkm'])
       if (projectArea > 0) {
         mappedArea += projectArea
         }
@@ -113,9 +115,9 @@ function populateProjectsTable(geojsonData) {
 
   geojsonData.features.forEach(function(element) {
 
-    tr = tableRef.insertRow();
+    var tr = tableRef.insertRow();
 
-    td = document.createElement('td')
+    var td = document.createElement('td')
     td.innerHTML = '<a href="project.html?projectId='+element.properties.project_id+'">'+element.properties.name+'</a>'
     tr.appendChild(td)
 
@@ -139,7 +141,7 @@ function populateProjectsTable(geojsonData) {
     }
 
     tr.appendChild(td)
-  })
+  });
 
   $('#projectsTable').DataTable();
   $('.dataTables_length').addClass('bs-select');

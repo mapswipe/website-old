@@ -17,32 +17,9 @@
   <!--#include virtual="/markup/components/gtm.shtml" -->
   <!-- End Component -->
 
-  <header>
-    <div class="wrapper">
-      <div class="container">
-        <a class="mapswipe-logo" href="index.html">
-          <img class="logo" src="assets/img/svg/mapswipe-white.svg">
-        </a>
-        <div class="mobile-menu hidden">
-          <div class="burger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <nav class="nav-menu" role="navigation">
-          <div>
-            <a class="navlink" href="get-involved.html">Get involved</a>
-            <a class="navlink" href="data.html">Data</a>
-            <a class="navlink active" href="about.html">About</a>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <!-- Start Component -->
+  <!--#include virtual="/markup/components/header.shtml" -->
+  <!-- End Component -->
 
   <div class="hero-container">
     <div class="wrapper">

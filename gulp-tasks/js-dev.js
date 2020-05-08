@@ -14,13 +14,14 @@ module.exports = function (gulp) {
 
     return function () {
         let jslinted =
-                gulp.src(['assets/js/*.js'])
+                gulp.src(['assets/js/**/*.js'])
                 //gulp.src(['assets/js/components/*.js', 'assets/js/framework*.js'])
                 .pipe(jslint())
                 .pipe(jslint.reporter(stylish)),
 
+            //JS files combined - add any new JS filepaths to 'entries' array
             browserified = browserify({
-                    entries: 'assets/js/index.js', 
+                    entries: ['assets/js/index.js','assets/js/components/overviewStats.js','assets/js/components/projectStats.js'], 
                     debug: true
                 })
                 .transform("babelify", {presets: [["env", {"targets": {"browsers": ["last 2 versions"]}}]]})

@@ -1,11 +1,13 @@
-function initAnalyticsProject() {
+var map;
+
+exports.initAnalyticsProject = function initAnalyticsProject() {
   // load project id from query variable
-  projectId = getQueryVariable('projectId').toString()
+  var projectId = getQueryVariable('projectId').toString()
   console.log(projectId)
 
   // init basic map with all projects as polygon, zoom to selected project
   initProjectMap();
-  url = 'https://apps.mapswipe.org/api/projects/projects_geom.geojson';
+  var url = 'https://apps.mapswipe.org/api/projects/projects_geom.geojson';
   addProject(url, projectId);
 
   // make plot for selected project
@@ -40,7 +42,7 @@ function initProjectMap() {
 
   setTimeout(function(){ map.invalidateSize()}, 400);
 
-  legend = L.control({position: 'bottomleft'});
+  var legend = L.control({position: 'bottomleft'});
   legend.onAdd = function (map) {
 	var div = L.DomUtil.create('div', 'info legend')
 	div.innerHTML += '<i style="background:orange"></i>active<br>'
@@ -75,14 +77,14 @@ function addProject (url, projectId) {
     };
 
     // create geojson layer
-    layer = L.geoJSON(geojsonData.responseJSON, {
+    var layer = L.geoJSON(geojsonData.responseJSON, {
         style: geojsonPolygonStyle
     })
 
     // set style based on feature properties
     layer.setStyle(function(feature) {
         if (feature.properties.status == 'active') {
-            style = {fillColor: 'orange', color:'black'}
+            var style = {fillColor: 'orange', color:'black'}
         } else if (feature.properties.status == 'finished') {
             style = {fillColor: 'blue'}
         } else if (feature.properties.status == 'inactive') {
@@ -107,7 +109,7 @@ function addProject (url, projectId) {
 
 
     // get info for our project
-    projectInfo = geojsonData.responseJSON.features.filter(function(item) {
+    var projectInfo = geojsonData.responseJSON.features.filter(function(item) {
         return item['properties']['project_id'] == projectId
     })[0]['properties']
 
@@ -136,7 +138,7 @@ function zoomToFeature(layer, projectId) {
 
 function populateProjectDataTable(projectId) {
 
-  datasets = [
+  var datasets = [
     {'name': 'Aggregated Results',
      'url': 'https://apps.mapswipe.org/api/agg_results/agg_results_' + projectId + '.csv',
      'description': 'aggregated results',
@@ -181,9 +183,9 @@ function populateProjectDataTable(projectId) {
 
   var tableRef = document.getElementById('projectDataTable').getElementsByTagName('tbody')[0];
   datasets.forEach(function(element) {
-    tr = tableRef.insertRow();
+    var tr = tableRef.insertRow();
 
-    td = document.createElement('td')
+    var td = document.createElement('td')
     td.innerHTML = projectId
     tr.appendChild(td)
 
@@ -214,7 +216,7 @@ function makePlot(url, projectId, attribute) {
 function processData(allRows, projectId, attribute) {
   var x = [], y = [];
   for (var i=0; i<allRows.length; i++) {
-    row = allRows[i];
+    var row = allRows[i];
     x.push( row['day'] );
     y.push( 100 * row[attribute] );
   }

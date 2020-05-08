@@ -1,6 +1,8 @@
 'use strict';
 
 import Navigation from './components/navigation.js';
+import {initMap} from './components/overviewStats.js';
+import {initAnalyticsProject} from './components/projectStats.js';
 
 let html = document.querySelector('html');
 let isMobile = false;
@@ -113,3 +115,5 @@ window.addEventListener('resize', function(){
     resizeId = setTimeout(doneResizing, 500);
 });
 
+window.initMap = initMap;
+window.initAnalyticsProject = initAnalyticsProject;
