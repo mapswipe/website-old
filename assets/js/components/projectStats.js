@@ -83,12 +83,17 @@ function addProject (url, projectId) {
 
     // set style based on feature properties
     layer.setStyle(function(feature) {
-        if (feature.properties.status == 'active') {
-            var style = {fillColor: 'orange', color:'black'}
-        } else if (feature.properties.status == 'finished') {
-            style = {fillColor: 'blue'}
-        } else if (feature.properties.status == 'inactive') {
-            style = {fillColor: 'grey'}
+        var style;
+        switch(feature.properties.status) {
+            case 'active':
+                style = {fillColor: 'orange', color:'black'}
+                break;
+            case 'finished':
+                style = {fillColor: 'blue'}
+                break;
+            case 'archived':
+            case 'inactive':
+                style = {fillColor: 'grey'}
         }
         if (feature.properties.project_id == projectId) {
             style.color = 'black',
