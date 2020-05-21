@@ -78,7 +78,7 @@ function addGeojsonLayer (url) {
     // add a popup
     layer.bindPopup(function (layer) {
         // popup with a link to the project page with detailed information
-        popup = '<a href="project.html?projectId='+layer.feature.properties.project_id+'">'+layer.feature.properties.name+'</a>'
+        var popup = '<a href="project.html?projectId='+layer.feature.properties.project_id+'">'+layer.feature.properties.name+'</a>'
         return popup;
     });
 
