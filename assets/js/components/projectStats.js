@@ -184,6 +184,11 @@ function populateProjectDataTable(projectId) {
      'description': 'Tasks',
      'datatype': 'CSV'
      },
+     {'name': 'Users',
+     'url': 'https://apps.mapswipe.org/api/users/users_' + projectId + '.csv',
+     'description': 'This dataset contains information on the individual contributions per user. This tells you for instance the most active users of this project.',
+     'datatype': 'CSV'
+     },
   ]
 
   var tableRef = document.getElementById('projectDataTable').getElementsByTagName('tbody')[0];
