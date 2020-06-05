@@ -7,7 +7,7 @@ exports.initAnalyticsProject = function initAnalyticsProject() {
 
   // init basic map with all projects as polygon, zoom to selected project
   initProjectMap();
-  var url = 'https://apps.mapswipe.org/api/projects/projects_geom.geojson';
+  var url = 'https://apps.mapswipe.org/api/projects/projects_centroid.geojson';
   addProject(url, projectId);
 
   // make plot for selected project
@@ -68,6 +68,73 @@ function addProject (url, projectId) {
   $.when(geojsonData).done(function() {
 
     // define default point style
+    var geojsonMarkerGreen = {
+        radius: 6,
+        fillColor: "grey",
+        color: "white",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+    // create geojson layer
+    var layer = L.geoJSON(geojsonData.responseJSON, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, geojsonMarkerGreen);
+        }
+    })
+
+    // set style based on feature properties
+    layer.setStyle(function(feature) {
+        if (feature.properties.status == 'active') {
+            return {fillColor: 'orange', color:'black', radius: 9}
+        } else if (feature.properties.status == 'finished') {
+            return {fillColor: 'blue'}
+        } else  if (feature.properties.status == 'inactive') {
+            return {fillColor: 'grey'}
+        }
+    }).addTo(map)
+
+    // add a popup
+    layer.bindPopup(function (layer) {
+        // popup with a link to the project page with detailed information
+        var popup = '<a href="project.html?projectId='+layer.feature.properties.project_id+'">'+layer.feature.properties.name+'</a>'
+        return popup;
+    });
+
+    // get info for our project
+    let projectInfo = geojsonData.responseJSON.features.filter(function(item) {
+        return item['properties']['project_id'] == projectId
+    })[0]['properties']
+
+    // add other project info to html
+    document.getElementById('project-info-name').innerHTML = projectInfo['name']
+    document.getElementById('project-info-status').innerHTML = projectInfo['status']
+    document.getElementById('project-info-description').innerHTML = projectInfo['project_details']
+    document.getElementById('project-info-progress').innerHTML = parseInt(Math.round(100 * projectInfo['progress']))
+    document.getElementById('project-info-contributors').innerHTML = projectInfo['number_of_users']
+    document.getElementById('project-info-area').innerHTML = parseInt(projectInfo['area_sqkm']).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+    // add project geometry now
+    var url = 'https://apps.mapswipe.org/api/project_geometries/project_geom_'+projectId+'.geojson';
+    addProjectGeometry(url, projectId, projectInfo);
+  })
+}
+
+
+function addProjectGeometry(url, projectId, projectInfo) {
+    var geojsonData = $.ajax({
+    url:url,
+    dataType: "json",
+    success: console.log("mapswipe project centroids data successfully loaded."),
+    error: function (xhr) {
+      alert(xhr.statusText)
+    }
+  })
+  // Specify that this code should run once the county data request is complete
+  $.when(geojsonData).done(function() {
+
+    // define default point style
     var geojsonPolygonStyle= {
         fillColor: "grey",
         color: "white",
@@ -77,14 +144,14 @@ function addProject (url, projectId) {
     };
 
     // create geojson layer
-    var layer = L.geoJSON(geojsonData.responseJSON, {
+    var ProjectGeomLayer = L.geoJSON(geojsonData.responseJSON, {
         style: geojsonPolygonStyle
     })
 
     // set style based on feature properties
-    layer.setStyle(function(feature) {
+    ProjectGeomLayer.setStyle(function(feature) {
         var style;
-        switch(feature.properties.status) {
+        switch(projectInfo['status']) {
             case 'active':
                 style = {fillColor: 'orange', color:'black'}
                 break;
@@ -102,42 +169,18 @@ function addProject (url, projectId) {
         return style
     }).addTo(map)
 
+    // zoom to selected project
+    map.fitBounds(ProjectGeomLayer.getBounds());
+    console.log('zoomed to feature')
+
     // add a popup
-    layer.bindPopup(function (layer) {
+    ProjectGeomLayer.bindPopup(function (layer) {
         // popup with a link to the project page with detailed information
-        popup = '<a href="project.html?projectId='+layer.feature.properties.project_id+'">'+layer.feature.properties.name+'</a>'
+        var popup = '<a href="project.html?projectId='+projectId+'">'+projectInfo['name']+'</a>'
         return popup;
     });
 
-    // zoom to selected project
-    zoomToFeature(layer, projectId);
-
-
-    // get info for our project
-    var projectInfo = geojsonData.responseJSON.features.filter(function(item) {
-        return item['properties']['project_id'] == projectId
-    })[0]['properties']
-
-    // add other project info to html
-    document.getElementById('project-info-name').innerHTML = projectInfo['name']
-    document.getElementById('project-info-status').innerHTML = projectInfo['status']
-    document.getElementById('project-info-description').innerHTML = projectInfo['project_details']
-    document.getElementById('project-info-progress').innerHTML = parseInt(Math.round(100 * projectInfo['progress']))
-    document.getElementById('project-info-contributors').innerHTML = projectInfo['number_of_users']
-    document.getElementById('project-info-area').innerHTML = parseInt(projectInfo['area_sqkm']).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-
   })
-}
-
-
-function zoomToFeature(layer, projectId) {
-  layer.eachLayer(function(layer) {
-    if (layer.feature.properties.project_id == projectId) {
-        console.log('zoom to feature')
-        map.fitBounds(layer.getBounds());
-    }
-  })
-
 }
 
 
