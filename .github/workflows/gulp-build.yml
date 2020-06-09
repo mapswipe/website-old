@@ -21,9 +21,17 @@ jobs:
     - name: Compile site to docs folder
       run: gulp build
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: gh-pages
-        publish_dir: docs
-        keep_files: true
+        SSH: true
+        BRANCH: gh-pages
+        FOLDER: docs
+        TARGET_FOLDER: docs
+    # - name: Deploy
+    #   uses: peaceiris/actions-gh-pages@v3
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     publish_branch: gh-pages
+    #     publish_dir: docs
+    #     keep_files: true
+
