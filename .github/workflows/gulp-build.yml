@@ -26,7 +26,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SSH: false
         BRANCH: gh-pages
-        FOLDER: docs
+        FOLDER: .
         TARGET_FOLDER: docs
     # - name: Deploy
     #   uses: peaceiris/actions-gh-pages@v3
