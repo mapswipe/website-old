@@ -3,7 +3,7 @@ name: Build site with gulp and deploy
 on:
   push:
     branches:
-      - master
+      - github-actions-build
 
 jobs:
   build:
@@ -20,11 +20,9 @@ jobs:
       run: npm install
     - name: Compile site to docs folder
       run: gulp build
-
-    - name: Commit changes
-      uses: EndBug/add-and-commit@v4
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        message: "Site deployed"
-        add: "/docs"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
+        keep_files: true
