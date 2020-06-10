@@ -24,9 +24,8 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SSH: false
         BRANCH: gh-pages
-        FOLDER: .
+        FOLDER: docs
         TARGET_FOLDER: docs
     # - name: Deploy
     #   uses: peaceiris/actions-gh-pages@v3
