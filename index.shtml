@@ -11,7 +11,7 @@
 
 </head>
 
-<body class="page-home" class="GitHub-actions-TEST">
+<body class="page-home">
 
   <!-- Start Component -->
   <!--#include virtual="/markup/components/gtm.shtml" -->
