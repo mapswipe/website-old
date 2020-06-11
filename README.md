@@ -1,5 +1,5 @@
 # MapSwipe Website
-This is the repository for the MapSwipe website: http://mapswipe.org/
+This is the repository for the MapSwipe website: https://mapswipe.org/
 
 You can find more information about the app itself in the [main app repository.](https://github.com/mapswipe/mapswipe)
 
