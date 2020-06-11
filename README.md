@@ -1,9 +1,10 @@
 # MapSwipe Website
 This is the repository for the MapSwipe website: http://mapswipe.org/
+
 You can find more information about the app itself in the [main app repository.](https://github.com/mapswipe/mapswipe)
 
 ## Deployment process
-The website is compiled using gulp. When any changes are pushed to the master branch, GitHub actions buils the site and deploys to the `gh-pages` branch - which is the root of the website.
+The website is compiled using gulp. When any changes are pushed to the master branch, GitHub actions builds the site and deploys to the `gh-pages` branch - which is the root of the website.
 
 The following instructions explain how to setup a local development environment and make changes so that they are compiled correctly.
 
@@ -14,7 +15,7 @@ The following instructions explain how to setup a local development environment 
 4. `npm install`
 5. `gulp develop` to start the local development version of site 
 
-The rendered HTML can be found in `/docs` - this is gitignored as the site is built on GitHub.
+The rendered HTML can be found in `/docs` - this is git-ignored as the deployment is done by GitHub Actions.
 
 ## Content changes
 - Edit the `.shtml` file of the existing page
