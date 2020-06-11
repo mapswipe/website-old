@@ -1,5 +1,11 @@
 # MapSwipe Website
-This is the repository for the MapSwipe's website: http://mapswipe.org/
+This is the repository for the MapSwipe website: http://mapswipe.org/
+You can find more information about the app itself in the [main app repository.](https://github.com/mapswipe/mapswipe)
+
+## Deployment process
+The website is compiled using gulp. When any changes are pushed to the master branch, GitHub actions buils the site and deploys to the `gh-pages` branch - which is the root of the website.
+
+The following instructions explain how to setup a local development environment and make changes so that they are compiled correctly.
 
 ## How to launch
 1. Run terminal in the repo folder
@@ -7,9 +13,8 @@ This is the repository for the MapSwipe's website: http://mapswipe.org/
 3. If not, install correct version from https://nodejs.org/en/download/releases/
 4. `npm install`
 5. `gulp develop` to start the local development version of site 
-6. `gulp build` to compile production version
 
-The rendered HTML can be found in `/docs`.
+The rendered HTML can be found in `/docs` - this is gitignored as the site is built on GitHub.
 
 ## Content changes
 - Edit the `.shtml` file of the existing page
