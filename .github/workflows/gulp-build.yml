@@ -1,4 +1,4 @@
-name: Build site with gulp and deploy
+name: Build site with gulp and deploy to gh-pages
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
     - uses: actions/checkout@v2
@@ -24,6 +24,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs
+        publish_dir: ./docs #this might not be needed as not deploying to /docs now
         keep_files: true
         cname: mapswipe.org
