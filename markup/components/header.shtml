@@ -16,7 +16,7 @@
       </div>
       <nav class="nav-menu" role="navigation">
         <div>
-          <a class="navlink" id="tutu" href="get-involved.html" data-i18n="header.getInvolved"></a>
+          <a class="navlink" href="get-involved.html" data-i18n="header.getInvolved"></a>
           <a class="navlink" href="data.html">Data</a>
           <a class="navlink" href="about.html">About</a>
         </div>
