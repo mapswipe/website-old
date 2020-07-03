@@ -5,6 +5,17 @@
         <img class="logo" src="assets/img/svg/mapswipe-white.svg">
       </a>
       <div class="mobile-menu hidden">
+        <div class="dropdown">
+          <div class="language-select language-menu">
+            <!-- Start Component -->
+                <!--#include virtual="/markup/svg/language-globe.shtml" -->
+                <!-- End Component -->
+          </div>  
+          <div class="dropdown-content dropdown-content--hide">
+              <a href="#">English</a>
+              <a href="#">Français</a>
+          </div>
+        </div>
         <div class="burger-menu">
           <span></span>
           <span></span>
@@ -19,6 +30,18 @@
           <a class="navlink" href="get-involved.html">Get involved</a>
           <a class="navlink" href="data.html">Data</a>
           <a class="navlink" href="about.html">About</a>
+          <div class="navlink dropdown dropdown-desktop">
+            <div class="language-select">
+              <!-- Start Component -->
+              <!--#include virtual="/markup/svg/language-globe.shtml" -->
+              <!-- End Component -->
+              <div class="dropdown-text">EN</div>
+            </div>
+            <div class="dropdown-content">
+              <a href="#">English</a>
+              <a href="#">Français</a>
+            </div>
+          </div>
         </div>
       </nav>
     </div>

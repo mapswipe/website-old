@@ -31,4 +31,10 @@ export default class Navigation {
     bindEvents() {
         this.root.addEventListener('click', this.toggleNav.bind(this));
     }
+
+    classToggle() {
+        this.classList.toggle('dropdown-content--hide');
+        this.classList.toggle('dropdown-content--show');
+        document.querySelector('language-select').addEventListener('click', classToggle);
+    }
 }
