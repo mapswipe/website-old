@@ -5,13 +5,13 @@
         <img class="logo" src="assets/img/svg/mapswipe-white.svg">
       </a>
       <div class="mobile-menu hidden">
-        <div class="dropdown">
-          <div class="language-select language-menu">
+        <div id="language-select" class="dropdown language-select--close">
+          <div class="language-menu">
             <!-- Start Component -->
                 <!--#include virtual="/markup/svg/language-globe.shtml" -->
                 <!-- End Component -->
           </div>  
-          <div class="dropdown-content dropdown-content--hide">
+          <div class="dropdown-content">
               <a href="#">English</a>
               <a href="#">Français</a>
           </div>

@@ -105,6 +105,29 @@ function doneResizing(){
     }
 }
 
+// lnguage dropdown for mobile
+function classToggle() {
+    if (document.getElementById("language-select").classList.contains("language-select--close")) {
+        this.classList.add('language-select--open');
+        this.classList.remove('language-select--close');
+    }
+    else {
+        this.classList.remove('language-select--open');
+        this.classList.add('language-select--close');
+    }
+}
+document.querySelector('#language-select').addEventListener('click', classToggle);
+
+var ignoreClickOnMeElement = document.getElementById('language-select');
+document.addEventListener('click', function(event) {
+    var isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
+    if (!isClickInsideElement) {
+        document.querySelector('#language-select').classList.add('language-select--close');
+        document.querySelector('#language-select').classList.remove('language-select--open');
+    }
+});
+
+
 // Basic functions to add relevant classes to html tag
 viewport();
 device();

@@ -116,13 +116,24 @@ header {
           text-align: center;
           &:hover {background-color: #394678;}
         }
+      }
 
-        &.dropdown-content--hide {
+      &.dropdown-desktop {
+        @media #{$tablet} {
           display: none;
         }
+      }
 
-        &.dropdown-content--show {
+      &.language-select--close {
+        .dropdown-content {
+          display: none;
+        }
+      }
+
+      &.language-select--open {
+        .dropdown-content {
           display: block;
+          margin-top: 52px;
         }
       }
     }
@@ -131,6 +142,9 @@ header {
       float: left;
       margin-right: 50px;
       margin-top: 15px;
+      @media #{$tablet} {
+        margin-top: 13px;
+      }
     }
 
     .burger-menu {
