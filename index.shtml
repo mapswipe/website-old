@@ -4,6 +4,12 @@
 
 <head>
   <title>MapSwipe | Every swipe helps put families on the map</title>
+
+  <!-- Canonical tags should be unique to each language. Will need to configure build to update. Probably not worth it. -->
+  <!-- <link rel="canonical" href="https://mapswipe.org/en/index.html"> -->
+
+  <link rel="alternate" href="http://mapswipe.org/en/index.html" hreflang="en">
+  <link rel="alternate" href="http://mapswipe.org/fr/index.html" hreflang="fr">
   
   <!-- Start Component -->
   <!--#include virtual="/markup/components/metas.shtml" -->

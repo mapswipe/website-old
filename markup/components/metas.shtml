@@ -14,8 +14,6 @@
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon-32x32.png">
 <link rel="apple-touch-icon" href="assets/img/logos/mapswipe_logo_only_256x256.png">
 
-<link rel="canonical" href="https://mapswipe.org/index.html">
-
 <!-- Add jQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
