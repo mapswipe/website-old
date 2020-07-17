@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>Project | MapSwipe</title>
+  <title data-i18n="project.page-title">Project | MapSwipe</title>
 
   <!-- Start Component -->
   <!--#include virtual="/markup/components/metas.shtml" -->
@@ -24,7 +24,7 @@
   <div class="hero-container-small">
     <div class="wrapper">
       <div class="hero-content">
-        <p class="hero-subheading"><a href="data.html">&#60; Back to data</a></p>
+        <p class="hero-subheading"><a href="data.html" data-i18n="project.page-back">&#60; Back to data</a></p>
         <h1 class="hero-heading"><span id="project-info-name"> </span> (<span id="project-info-status"> </span>)</h1>
       </div>
     </div>
@@ -33,7 +33,7 @@
   <div class="section">
     <div class="section-container">
       <div class="rich-text">
-        <h2>Project Details</h2>
+        <h2 data-i18n="project.details-title">Project Details</h2>
         <p><span id="project-info-description"></span></p>
       </div>
     </div>
@@ -45,15 +45,15 @@
     <div class="section-container section-flex">
         <div class="Stat-Item one-third">
           <div class="emphasizedNumber"><span id="project-info-progress"> </span>%</div>
-          <div class="stats-title">Complete</div>
+          <div class="stats-title" data-i18n="project.stats-complete">Complete</div>
         </div>
         <div class="Stat-Item one-third">
           <div id="project-info-contributors" class="emphasizedNumber"> </div>
-          <div class="stats-title">Contributors</div>
+          <div class="stats-title" data-i18n="project.stats-contributors">Contributors</div>
         </div>
         <div class="Stat-Item one-third">
           <div id="project-info-area" class="emphasizedNumber"> </div>
-          <div class="stats-title">Square Kilometers</div>
+          <div class="stats-title">km<sup>2</sup></div>
         </div>
     </div>
     <div class="section-container section-flex">
@@ -74,16 +74,16 @@
   <div class="section light-blue">
     <div class="section-container">
       <div class="rich-text">
-        <h2>Download Data</h2>
-        <p>Below you'll find the data downloads for this MapSwipe project, including a GeoJSON file that can be imported into the HOT Tasking Manager for more detailed mapping of the area. If you need more information or if you have a special request related to MapSwipe data get in contact with the team at the <a href="https://heigit.org/geoinformation-for-humanitarian-aid/">Heidelberg Institute for Geoinformation Technology</a></p>
+        <h2 data-i18n="project.download-title">Download Data</h2>
+        <p data-i18n="[html]project.download-text">Below you'll find the data downloads for this MapSwipe project, including a GeoJSON file that can be imported into the HOT Tasking Manager for more detailed mapping of the area. If you need more information or if you have a special request related to MapSwipe data get in contact with the team at the <a href="https://heigit.org/geoinformation-for-humanitarian-aid/">Heidelberg Institute for Geoinformation Technology</a></p>
       </div>
       <table id="projectDataTable" class="table table-bordered">
           <thead>
             <tr class="thead-inverse">
-              <th>Project ID</th>
-              <th>Dataset Name</th>
-              <th>Data Type</th>
-              <th>Dataset Description</th>
+              <th data-i18n="project.table-project">Project ID</th>
+              <th data-i18n="project.table-dataset">Dataset name</th>
+              <th data-i18n="project.table-type">Data type</th>
+              <th data-i18n="project.table-description">Dataset description</th>
               <th></th>
             </tr>
           </thead>
@@ -97,12 +97,12 @@
   <div class="section">
     <div class="section-container">
       <div class="rich-text">
-        <h2>Our License</h2>
-        <p>This project is part of the OpenStreetMap community. The goal is high-quality geographical data, freely
+        <h2 data-i18n="project.license-title">Our License</h2>
+        <p data-i18n="project.license-text1">This project is part of the OpenStreetMap community. The goal is high-quality geographical data, freely
           accessible and available to everyone. OSM’s reciprocal license protects the data from being appropriated by
           services that do not share back to OSM.</p>
 
-        <p>MapSwipe is released under a "liberal" non-reciprocal license (Creative Commons Attribution). Whenever you want to use the data, just make sure to
+        <p data-i18n="project.license-text2">MapSwipe is released under a "liberal" non-reciprocal license (Creative Commons Attribution). Whenever you want to use the data, just make sure to
           credit the MapSwipe contributors.</p>
       </div>
     </div>
