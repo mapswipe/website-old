@@ -18,6 +18,7 @@ module.exports = function (gulp) {
     // make sure to use them under "resources" about 25 lines below
     const translationEN = require('../locales/en');
     const translationFR = require('../locales/fr');
+    const fallbackLng = 'en';
 
     // list the languages you want to translate to
     // each one will get a dedicated folder under /<lang>/
@@ -40,6 +41,7 @@ module.exports = function (gulp) {
                     // init the translation system for each language
                         i18next.init({
                           lng: langCode,
+                          fallbackLng: fallbackLng,
                           debug: false,
                           resources: {
                               // add one line for each language
