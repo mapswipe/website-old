@@ -13,9 +13,9 @@ require('fs').readdirSync(tasksPath).forEach(
     }
 );
 
-gulp.task('build', gulpSequence('dist-clean', ['html', 'css', 'js', 'static']));
+gulp.task('build', gulpSequence('dist-clean', ['html', 'css', 'js', 'static', 'redirect']));
 //gulp.task('build', gulpSequence('dist-clean', ['html', 'css', 'js', 'static'], 'icons', 'css-critical'));
-gulp.task('build-dev', [ 'css-dev', 'js-dev', 'static', 'html']);
+gulp.task('build-dev', [ 'css-dev', 'js-dev', 'static', 'html', 'redirect']);
 gulp.task('watch', ['build-dev', 'css-watch', 'js-watch', 'static-watch', 'html-watch']);
 gulp.task('develop', ['build-dev', 'watch', 'server']);
 gulp.task('default', ['build']);
