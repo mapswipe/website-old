@@ -33,7 +33,7 @@
           <a class="appstore-link" href="https://play.google.com/store/apps/details?id=org.missingmaps.mapswipe" target="_blank">
             <img height="60" src="assets/img/svg/google-play-dark.svg">
           </a>
-          <a class="appstore-link last" href="https://github.com/mapswipe/mapswipe/releases/latest" target="_blank">
+          <a class="appstore-link last" href="https://github.com/mapswipe/mapswipe/releases/latest/download/app-production-release.apk" target="_blank">
             <img height="60" src="assets/img/logos/download_apk.png">
           </a>
         </div>        
