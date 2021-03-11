@@ -188,12 +188,12 @@ function populateProjectDataTable(projectId) {
 
   var datasets = [
     {'name': 'Aggregated Results',
-     'url': 'https://apps.mapswipe.org/api/agg_results/agg_results_' + projectId + '.csv',
+     'url': 'https://apps.mapswipe.org/api/agg_results/agg_results_' + projectId + '.csv.gz',
      'description': 'aggregated results',
      'datatype': 'CSV'
      },
      {'name': 'Aggregated Results (with Geometry)',
-     'url': 'https://apps.mapswipe.org/api/agg_results/agg_results_' + projectId + '_geom.geojson',
+     'url': 'https://apps.mapswipe.org/api/agg_results/agg_results_' + projectId + '_geom.geojson.gz',
      'description': 'aggregated results',
      'datatype': 'GeoJSON'
      },
@@ -208,7 +208,7 @@ function populateProjectDataTable(projectId) {
      'datatype': 'GeoJSON'
      },
      {'name': 'Groups',
-     'url': 'https://apps.mapswipe.org/api/groups/groups_' + projectId + '.csv',
+     'url': 'https://apps.mapswipe.org/api/groups/groups_' + projectId + '.csv.gz',
      'description': 'Groups',
      'datatype': 'CSV'
      },
@@ -218,12 +218,12 @@ function populateProjectDataTable(projectId) {
      'datatype': 'CSV'
      },
      {'name': 'Results',
-     'url': 'https://apps.mapswipe.org/api/results/results_' + projectId + '.csv',
+     'url': 'https://apps.mapswipe.org/api/results/results_' + projectId + '.csv.gz',
      'description': 'Results',
      'datatype': 'CSV'
      },
      {'name': 'Tasks',
-     'url': 'https://apps.mapswipe.org/api/tasks/tasks_' + projectId + '.csv',
+     'url': 'https://apps.mapswipe.org/api/tasks/tasks_' + projectId + '.csv.gz',
      'description': 'Tasks',
      'datatype': 'CSV'
      },
@@ -232,6 +232,11 @@ function populateProjectDataTable(projectId) {
      'description': 'This dataset contains information on the individual contributions per user. This tells you for instance the most active users of this project.',
      'datatype': 'CSV'
      },
+     {'name': 'Area of Interest',
+     'url': 'https://apps.mapswipe.org/api/project_geometries/project_geom_' + projectId + '.geojson',
+     'description': 'This dataset contains information on the project region.',
+     'datatype': 'GeoJSON'
+     }
   ]
 
   var tableRef = document.getElementById('projectDataTable').getElementsByTagName('tbody')[0];
