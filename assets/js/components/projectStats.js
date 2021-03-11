@@ -189,12 +189,12 @@ function populateProjectDataTable(projectId) {
   var datasets = [
     {'name': 'Aggregated Results',
      'url': 'https://apps.mapswipe.org/api/agg_results/agg_results_' + projectId + '.csv.gz',
-     'description': 'aggregated results',
+     'description': 'Aggregated Results. This gives you the unfiltered MapSwipe results aggregated on the task level. This is most suited if you want to apply some custom data processing with the MapSwipe data, e.g. select only specific tasks. Check our <a href="https://mapswipe-workers.readthedocs.io/en/master/data.html#aggregated-results">documentation</a> for more details. (Note that you need to unzip this .gz file before you can use it.)',
      'datatype': 'CSV'
      },
      {'name': 'Aggregated Results (with Geometry)',
      'url': 'https://apps.mapswipe.org/api/agg_results/agg_results_' + projectId + '_geom.geojson.gz',
-     'description': 'aggregated results',
+     'description': 'Aggregated Results. This gives you the unfiltered MapSwipe results aggregated on the task level. This is most suited if you want to apply some custom data processing with the MapSwipe data, e.g. select only specific tasks. Check our <a href="https://mapswipe-workers.readthedocs.io/en/master/data.html#aggregated-results">documentation</a> for more details. (Note that you need to unzip this .gz file before you can use it.)',
      'datatype': 'GeoJSON'
      },
      {'name': 'HOT Tasking Manager Geometries',
@@ -209,7 +209,7 @@ function populateProjectDataTable(projectId) {
      },
      {'name': 'Groups',
      'url': 'https://apps.mapswipe.org/api/groups/groups_' + projectId + '.csv.gz',
-     'description': 'Groups',
+     'description': 'Groups. (Note that you need to unzip this .gz file before you can use it.)',
      'datatype': 'CSV'
      },
      {'name': 'History',
@@ -219,12 +219,12 @@ function populateProjectDataTable(projectId) {
      },
      {'name': 'Results',
      'url': 'https://apps.mapswipe.org/api/results/results_' + projectId + '.csv.gz',
-     'description': 'Results',
+     'description': 'This gives you the unfiltered MapSwipe results. (Note that you need to unzip this .gz file before you can use it.)',
      'datatype': 'CSV'
      },
      {'name': 'Tasks',
      'url': 'https://apps.mapswipe.org/api/tasks/tasks_' + projectId + '.csv.gz',
-     'description': 'Tasks',
+     'description': 'Tasks. (Note that you need to unzip this .gz file before you can use it.)',
      'datatype': 'CSV'
      },
      {'name': 'Users',
