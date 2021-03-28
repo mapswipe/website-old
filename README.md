@@ -15,7 +15,8 @@ The following instructions explain how to setup a local development environment 
    * for Ubuntu you can check here [how to install nvm](https://github.com/nvm-sh/nvm) to install nvm and then run `nvm install v11.15.0`
    * you might need to install gulp as well: ` npm install --global gulp-cli`
 4. `npm install`
-5. `gulp develop` to start the local development version of site 
+6. `gulp develop` to start the local development version of site 
+7. If gulp does not work, it could be that PATH is not set. Run `node_modules/.bin/gulp develop`)
 
 The rendered HTML can be found in `/docs` - this is git-ignored as the deployment is done by GitHub Actions.
 
