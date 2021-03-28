@@ -13,7 +13,8 @@ The following instructions explain how to setup a local development environment 
 2. Make sure running `node v.11.15.0` by running `node -v`
 3. If not, install correct version from https://nodejs.org/en/download/releases/
 4. `npm install`
-5. `gulp develop` to start the local development version of site 
+6. `gulp develop` to start the local development version of site 
+7. If gulp does not work, it could be that PATH is not set. Run `node_modules/.bin/gulp develop`)
 
 The rendered HTML can be found in `/docs` - this is git-ignored as the deployment is done by GitHub Actions.
 
