@@ -14,6 +14,27 @@
         "learn-more": "Learn more",
         "get-involved": "Get involved"
     },
+    "get-involved": {
+        "page-title": "Get Involved | MapSwipe",
+        "hero-heading": "Swipe, volunteer and share.",
+        "hero-subheading": "There are many ways to get involved with MapSwipe.",
+        "mapping-title": "Start mapping",
+        "mapping-text1": "Download the app and swipe through satellite imagery while tapping the features you spot. The tiles you mark will then be drawn by other volunteers to create detailed maps.",
+        "mapping-text2": "Contribute from anywhere and track your progress with badges. Commit to help a little every day during your morning commute or while stuck in queue for your coffee. <strong>In as little as 10 minutes, you can help to locate entire communities.</strong>",
+        "volunteer-title": "Volunteer with us",
+        "volunteer-text1": "MapSwipe is powered by a team of passionate volunteers working to ensure that no community is left behind during humanitarian response. <strong>We want you to join us.</strong>",
+        "volunteer-text2": "We’re always looking for volunteers to help develop new features, maintain existing code, and ensure that MapSwipe continues to be accessible to the global community.",
+        "volunteer-text3": "Not a techie? No problem! There are plenty of ways for individuals with any background to get involved. From helping out at events to spreading the word about MapSwipe, we can find the right opportunity for you.",
+        "request-title": "Request an area to be mapped",
+        "request-text1": "Diverse communities and organizations throughout the world have requested projects to be created using MapSwipe, increasing their efficiency and effectiveness in humanitarian response and development activities. Are you looking to leverage MapSwipe in your next project? It’s simple.",
+        "request-text2": "Email us and a member from the MapSwipe team will follow up with more information on project requirements.",
+        "contact": "Contact us at info@mapswipe.org",
+        "event-title": "Join or host an event",
+        "event-text1": "Organizing a MapSwipe-a-thon is a simple, yet powerful way to make an impact. All you need is a room, your mobile phone, and an internet connection. Grab your friends, organize your colleagues, and get swiping for a humanitarian cause.",
+        "event-text2": "Ready to organize your event? We’ve produced a toolkit for everything you need to get started. Email us to find out more.",
+        "questions-title": "Have other questions?",
+        "questions-text1": "Get in touch! Whether you have feedback on how to improve the app, want to learn more about the various MapSwipe project types, or are looking to learn more about MapSwipe analytics and data, our team would love to hear from you."
+    },
     "data": {
     	"page-title": "Data | MapSwipe",
     	"hero-heading": "Swiping is just the beginning.<br>Explore the data.",
