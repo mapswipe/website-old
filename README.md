@@ -12,6 +12,8 @@ The following instructions explain how to setup a local development environment 
 1. Run terminal in the repo folder
 2. Make sure running `node v.11.15.0` by running `node -v`
 3. If not, install correct version from https://nodejs.org/en/download/releases/
+   * for Ubuntu you can check here [how to install nvm](https://github.com/nvm-sh/nvm) to install nvm and then run `nvm install v11.15.0`
+   * you might need to install gulp as well: ` npm install --global gulp-cli`
 4. `npm install`
 5. `gulp develop` to start the local development version of site 
 
