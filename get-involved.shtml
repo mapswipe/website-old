@@ -42,16 +42,16 @@
         <div class="appstore-container">
           <a class="appstore-link" href="https://itunes.apple.com/us/app/mapswipe/id1133855392?ls=1&amp;mt=8"
             target="_blank">
-            <img height="60" src="assets/img/svg/app-store-dark.svg">
+            <img height="60" src="../assets/img/svg/app-store-dark.svg">
           </a>
           <a class="appstore-link last" href="https://play.google.com/store/apps/details?id=org.missingmaps.mapswipe"
             target="_blank">
-            <img height="60" src="assets/img/svg/google-play-dark.svg">
+            <img height="60" src="../assets/img/svg/google-play-dark.svg">
           </a>
         </div>
       </div>
       <div class="one-third">
-        <img src="assets/img/logo-blue.png">
+        <img src="../assets/img/logo-blue.png">
       </div>
     </div>
   </div>
@@ -59,7 +59,7 @@
   <div class="section yellow">
     <div class="section-container section-flex image-left">
       <div class="one-third">
-        <img src="assets/img/volunteer.png">
+        <img src="../assets/img/volunteer.png">
       </div>
       <div class="two-thirds">
         <h2 data-i18n="get-involved.volunteer-title">Volunteer with us</h2>
@@ -91,7 +91,7 @@
           <!-- End Component --><span data-i18n="get-involved.contact">Contact us at info@mapswipe.org</span></a>
       </div>
       <div class="one-third">
-        <img src="assets/img/satellite.png">
+        <img src="../assets/img/satellite.png">
       </div>
     </div>
   </div>
@@ -99,7 +99,7 @@
   <div class="section light-blue">
     <div class="section-container section-flex image-left">
       <div class="one-third">
-        <img src="assets/img/mapathon.png">
+        <img src="../assets/img/mapathon.png">
       </div>
       <div class="two-thirds">
         <h2 data-i18n="get-involved.event-title">Join or host an event</h2>
