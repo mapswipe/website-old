@@ -16,14 +16,18 @@ module.exports = function (gulp) {
 
     // import the translations here, one for each language
     // make sure to use them under "resources" about 25 lines below
+    const translationCS = require('../locales/cs');
     const translationEN = require('../locales/en');
+    const translationES = require('../locales/es');
     const translationFR = require('../locales/fr');
     const fallbackLng = 'en';
 
     // list the languages you want to translate to
     // each one will get a dedicated folder under /<lang>/
     const supportedLangs = [
+        'cs',
         'en',
+        'es',
         'fr',
     ];
     return function () {
@@ -45,7 +49,9 @@ module.exports = function (gulp) {
                           debug: false,
                           resources: {
                               // add one line for each language
+                              cs: { translation: translationCS },
                               en: { translation: translationEN },
+                              es: { translation: translationES },
                               fr: { translation: translationFR },
                           }
                         }, function(err, t) {
