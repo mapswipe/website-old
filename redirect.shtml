@@ -2,7 +2,7 @@
 <html lang="en">                                                                
     <head>                                                                      
         <meta charset="utf-8">
-        <meta http-equiv="refresh" content="0;url=/en" />      
-        <link rel="canonical" href="/en" />                    
+        <meta http-equiv="refresh" content="0;url=/en/PAGENAME" />      
+        <link rel="canonical" href="/en/PAGENAME" />                    
     </head>                                                                                                                                                                                                                                   
 </html>
