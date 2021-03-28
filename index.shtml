@@ -34,7 +34,7 @@
             <img height="60" src="../assets/img/svg/google-play-dark.svg">
           </a>
           <a class="appstore-link last" href="https://github.com/mapswipe/mapswipe/releases/latest/download/app-production-release.apk" target="_blank">
-            <img height="60" src="assets/img/logos/download_apk.png">
+            <img height="60" src="../assets/img/logos/download_apk.png">
           </a>
         </div>        
       </div>
