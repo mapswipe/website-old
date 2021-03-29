@@ -88,7 +88,7 @@ function addProject (url, projectId) {
     layer.setStyle(function(feature) {
         if (feature.properties.status == 'active') {
             return {fillColor: 'orange', color:'black', radius: 9}
-        } else if (feature.properties.status == 'finished') {
+        } else if ((feature.properties.status == 'finished') || (feature.properties.status == 'archived')) {
             return {fillColor: 'blue'}
         } else  if (feature.properties.status == 'inactive') {
             return {fillColor: 'grey'}
@@ -155,10 +155,10 @@ function addProjectGeometry(url, projectId, projectInfo) {
             case 'active':
                 style = {fillColor: 'orange', color:'black'}
                 break;
+            case 'archived':
             case 'finished':
                 style = {fillColor: 'blue'}
                 break;
-            case 'archived':
             case 'inactive':
                 style = {fillColor: 'grey'}
         }

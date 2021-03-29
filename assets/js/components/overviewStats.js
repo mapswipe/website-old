@@ -68,8 +68,8 @@ function addGeojsonLayer (url) {
     layer.setStyle(function(feature) {
         if (feature.properties.status == 'active') {
             return {fillColor: 'orange', color:'black', radius: 9}
-        } else if (feature.properties.status == 'finished') {
-            return {fillColor: 'blue'}
+        } else if ((feature.properties.status == 'finished') || (feature.properties.status == 'archived')) {
+            return {fillColor: 'blue', fillOpacity: 0.5}
         } else  if (feature.properties.status == 'inactive') {
             return {fillColor: 'grey'}
         }
