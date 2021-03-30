@@ -39,7 +39,7 @@ The `.shtml` files are used to compile all the language versions but the text is
 	- Please put in order of page (for easy reference, not technical requirement)
 
 ### Translating text
-- Any changes made to `locales/en.json` are automatically sent to Transifex for translation.
+- When any changes to `locales/en.json` are pushed to Github, they are automatically sent to Transifex for translation.
 - When a language is 100% complete, Transifex will open a PR to add/update the language to `locales/<lang>.json`.
 - Any strings not translated, will fall back to English.
 - Full details of the translation process, including adding new languages are below.
