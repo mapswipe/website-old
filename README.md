@@ -33,7 +33,8 @@ The `.shtml` files are used to compile all the language versions but the text is
 ### Adding new text
 - Add HTML tag as normal in the shtml page
 - Add the `data-i18n` attribute to the HTML tag with a unique id for the text
-	-  Must follow [page].[identifier] e.g. `data-i18n="homepage.hero-heading"`
+	- Must follow [page].[identifier] e.g. `data-i18n="homepage.hero-heading"`
+	- When the text contains html tags (e.g. `<strong>`,`<a>`), the `data-i18n` tag must also be preceded with `[html]` e.g.`data-i18n="[html]homepage.hero-heading"`
 - Add the new `data-i18n` identifier to `locales/en.json`
 	- Must be nested properly within the correct page
 	- Please put in order of page (for easy reference, not technical requirement)
