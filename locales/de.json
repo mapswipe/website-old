@@ -1,24 +1,24 @@
 {
     "header": {
-        "getInvolved": "Participez",
-        "data": "Données",
-        "about": "A propos"
+        "getInvolved": "Mach' mit",
+        "data": "Daten",
+        "about": "Über"
     },
     "homepage": {
     	"page-title": "MapSwipe | Every swipe helps put families on the map",
-        "hero-heading": "Swipe and tap.<br>Put communities on the map.",
-        "hero-subheading": "Help humanitarians find and help vulnerable people. Download MapSwipe.",
+        "hero-heading": "Wischen und klicken. <br> Bringe Gemeinschaften auf die Karte.",
+        "hero-subheading": "Hilf' humanitären Organisationen verletzliche Personen zu finden und ihnen zu helfen.. Lade MapSwipe herunter.",
         "overview-stats": "More than 30,000 volunteers engaged.<br>With over 1,000,000 sq km swiped.<br>Across 29 countries.",
         "overview-text": "Around the world, millions of individuals are affected by disasters, disease, and conflict. First responders working with these communities often have to cover large areas, but lack the data necessary for an efficient, effective response. Through MapSwipe, volunteers pinpoint where critical infrastructure and populations are located, allowing mappers to focus only on areas where they know features need to be mapped.",
         "cta": "With your mobile phone, you can play a part in helping communities around the world, one swipe at a time.",
-        "learn-more": "En savoir plus",
-        "get-involved": "Participez"
+        "learn-more": "Learn more",
+        "get-involved": "Get involved"
     },
     "get-involved": {
-        "page-title": "Participez | MapSwipe",
-        "hero-heading": "Tapez, participez et partagez.",
-        "hero-subheading": "Il y'a plein de manières de participer à MapSwipe.",
-        "mapping-title": "Commencez à cartographier",
+        "page-title": "Get Involved | MapSwipe",
+        "hero-heading": "Swipe, volunteer and share.",
+        "hero-subheading": "There are many ways to get involved with MapSwipe.",
+        "mapping-title": "Start mapping",
         "mapping-text1": "Download the app and swipe through satellite imagery while tapping the features you spot. The tiles you mark will then be drawn by other volunteers to create detailed maps.",
         "mapping-text2": "Contribute from anywhere and track your progress with badges. Commit to help a little every day during your morning commute or while stuck in queue for your coffee. <strong>In as little as 10 minutes, you can help to locate entire communities.</strong>",
         "volunteer-title": "Volunteer with us",
