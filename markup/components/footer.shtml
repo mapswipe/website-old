@@ -15,7 +15,7 @@
             <!--#include virtual="/markup/svg/facebook.shtml" -->
             <!-- End Component -->
           </a>
-          <a class="social-link" href="https://twitter.com/TheMissingMaps" target="_blank">
+          <a class="social-link" href="https://twitter.com/mapswipe" target="_blank">
             <!-- Start Component -->
             <!--#include virtual="/markup/svg/twitter.shtml" -->
             <!-- End Component -->
