@@ -89,9 +89,11 @@
 
         <h3>What information we might collect</h3>
         <p>When you create an account, we will ask you to provide your email address and create a username and password
-          for your account. Your email address is referred to in this Privacy Notice as 'personal information', whereas
-          your username will be publicly visible and tied to your contributions in the app. Your password is encrypted
-          and not visible to anyone.</p>
+          for your account. If you use your OpenStreetMap account to signup or login, we will instead obtain your user
+          identifier and username from OpenStreetMap. Your email address and OpenStreetMap identifier are referred to in
+          this Privacy Notice as 'personal information', whereas your username will be publicly visible and tied to your
+          contributions in the app. Your password is encrypted and not visible to anyone.</p>
+        <p> 
 
         <h3>If you're under 16</h3>
         <p>If you're aged under 16, you must get your parent/guardian's permission before you provide any personal
