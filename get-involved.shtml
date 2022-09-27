@@ -127,10 +127,8 @@
             swiping!</li>
         </ul>
 
-        <a href="mailto:info@mapswipe.org" class="link link-email">
-          <!-- Start Component -->
-          <!--#include virtual="/markup/svg/email.shtml" -->
-          <!-- End Component --><span data-i18n="get-involved.event-contact">Contact us at info@mapswipe.org</span></a>
+        <a href="https://wiki.openstreetmap.org/wiki/MapSwipe_event_FAQ" class="link link-email">
+          <span data-i18n="get-involved.event-contact">Read the FAQ</span></a>
       </div>
     </div>
   </div>
