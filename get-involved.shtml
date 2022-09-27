@@ -109,11 +109,28 @@
 
         <p data-i18n="get-involved.event-text2">Ready to organize your event? We’ve produced a toolkit for everything you need to get started. Email us to
           find out more.</p>
+        <ul>
+          <li data-i18n="get-involved.event-list1">Check out the MapSwipe event FAQ page
+            on the OSM wiki</li>
+          <li data-i18n="get-involved.event-list2">Assess your event size to whether
+            additional support may be required. Most
+            events will not require any special preparation or support</li>
+          <li data-i18n="get-involved.event-list3">Download & review the Introduction &
+            Training Presentation on the FAQ page
+          </li>
+          <li data-i18n="get-involved.event-list4">Download the app from the Apple or
+            Google store</li>
+          <li data-i18n="get-involved.event-list5">Familiarize yourself with the app and
+            missions</li>
+          <li data-i18n="get-involved.event-list6">Plan & promote your event</li>
+          <li data-i18n="get-involved.event-list7">Get together, pick a mission, get
+            swiping!</li>
+        </ul>
 
         <a href="mailto:info@mapswipe.org" class="link link-email">
           <!-- Start Component -->
           <!--#include virtual="/markup/svg/email.shtml" -->
-          <!-- End Component --><span data-i18n="get-involved.contact">Contact us at info@mapswipe.org</span></a>
+          <!-- End Component --><span data-i18n="get-involved.event-contact">Contact us at info@mapswipe.org</span></a>
       </div>
     </div>
   </div>
